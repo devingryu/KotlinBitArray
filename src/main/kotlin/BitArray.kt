@@ -29,7 +29,7 @@ class BitArray(val size: Int, private val init: Boolean) {
     }
 
     override fun toString(): String {
-        var result: String = ""
+        var result = ""
         if (size != 0) {
             for (byte in 0 until dat.size - 1)
                 for (bit in 0..7)
