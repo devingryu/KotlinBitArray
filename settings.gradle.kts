@@ -1,3 +1,3 @@
 
-rootProject.name = "BitArray"
+rootProject.name = "kotlin-bitarray"
 
