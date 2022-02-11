@@ -1,3 +1,4 @@
+import com.devingryu.datatype.BitArray
 import java.lang.IndexOutOfBoundsException
 import kotlin.test.Test
 import kotlin.test.assertEquals

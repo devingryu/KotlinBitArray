@@ -3,6 +3,7 @@ package com.devingryu.datatype
 import kotlin.experimental.and
 import kotlin.experimental.inv
 import kotlin.experimental.or
+import kotlin.experimental.xor
 
 /**
  * An array of bits. Saves boolean value in a minimal space of [ByteArray].
@@ -28,6 +29,10 @@ class BitArray(val size: Int, private val init: Boolean) {
             dat[index.floorDiv(8)] = dat[index.floorDiv(8)] or (1 shl (index % 8)).toByte()
         else        // clear
             dat[index.floorDiv(8)] = dat[index.floorDiv(8)] and (1 shl (index % 8)).toByte().inv()
+    }
+    fun toggle(index: Int) {
+        if (index >= size) throw IndexOutOfBoundsException()
+        dat[index.floorDiv(8)] = dat[index.floorDiv(8)] xor (1 shl (index % 8)).toByte()
     }
 
     override fun toString(): String {
